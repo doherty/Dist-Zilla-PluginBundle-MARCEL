@@ -31,7 +31,6 @@ use Dist::Zilla::Plugin::MetaProvides::Package;
 use Dist::Zilla::Plugin::MetaTests;
 use Dist::Zilla::Plugin::MetaYAML;
 use Dist::Zilla::Plugin::NextRelease;
-use Dist::Zilla::Plugin::NoTabsTests;
 use Dist::Zilla::Plugin::PkgVersion;
 use Dist::Zilla::Plugin::PodCoverageTests;
 use Dist::Zilla::Plugin::PodSyntaxTests;
@@ -49,6 +48,7 @@ use Dist::Zilla::Plugin::Test::DistManifest;
 use Dist::Zilla::Plugin::Test::EOL;
 use Dist::Zilla::Plugin::Test::Kwalitee;
 use Dist::Zilla::Plugin::Test::MinimumVersion;
+use Dist::Zilla::Plugin::Test::NoTabs;
 use Dist::Zilla::Plugin::Test::Perl::Critic;
 use Dist::Zilla::Plugin::Test::PodSpelling;
 use Dist::Zilla::Plugin::Test::Portability;
@@ -120,7 +120,7 @@ sub bundle_config {
         [ 'Test::CheckChanges'   => {} ],
         [ 'Test::DistManifest'   => {} ],
         [ 'Test::UnusedVars'     => {} ],
-        [ NoTabsTests            => {} ],
+        [ 'Test::NoTabs'         => {} ],
         [ 'Test::EOL'            => {} ],
         [ InlineFilesMARCEL      => {} ],
         [ ReportVersions         => {} ],
